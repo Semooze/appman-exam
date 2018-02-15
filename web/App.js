@@ -2,6 +2,9 @@ import React from 'react';
 import home from './styles/index.scss' ;
 import logo from './logo.svg';
 
+let glitter = "#f8f8ff";
+document.body.style.backgroundColor = glitter;
+
 const Logo = (props) => {
 
     let className="header--logo";
@@ -88,7 +91,7 @@ class App extends React.Component {
                         handleSubmit={this.handleSubmit}
                         errorMessage={this.state.errorMessage}
                     />
-                    <div className="footer--forgot-password"><a href="#">Forgot password</a></div>
+                    <div className="footer--forgot-password"><a href="#">Forgot password ?</a></div>
                     <div className="footer--new-account"><a href="#">Create a new account</a></div>
                 </div>
             </div>

@@ -1,4 +1,10 @@
 :global {
+
+    $ghost-white: #F7F6FB;
+    $outer-space: #464546;
+    $wenge: #645C58;
+    $deep-sky-blue: #00BFFF;
+
     // global style here
     .logo-spin {
         animation: App-logo-spin infinite 3s linear;
@@ -13,12 +19,27 @@
         }
     }
 
-    $anti-flash-white: #f8f8ff;
-    $ghost-white: #F7F6FB;
-    $dim-grey: #6D6C6E;
-    $spanish-grey: #9C908A;
-    $winter-wizard: #98EAFD;
-    $deep-sky-blue: #00BFFF;
+    input {
+        color: $outer-space;
+        border: 1px solid #ced4da;
+        background-color: transparent;
+        border-radius: 1rem;
+        padding: 6px;
+        display: block;
+        height: 10%;
+        width: 95%;
+        font-size: 1rem;
+
+        &:focus {
+            border-color: #242526;
+            outline:0;
+        }
+    }
+
+    p {
+        margin-bottom: 5px;
+        color: $wenge;
+    }
 
     .header--logo {
         width: 180px;
@@ -33,7 +54,7 @@
         height: 450px;
         width: 450px;
         background-color: $ghost-white;
-        box-shadow: 1px 1px 3px $spanish-grey;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
     }
 
     .login--form-inside {
@@ -48,31 +69,10 @@
        margin-bottom: 20px;
     }
 
-    input {
-        border-radius: 1rem;
-        padding: 6px;
-        display: block;
-        height: 5%;
-        width: 95%;
-
-        &:focus {
-            border-color: #242526;
-        }
-    }
-
-    p {
-        margin-bottom: 5px;
-        color: $dim-grey;
-    }
-
     .body--submit-button {
         cursor: pointer;
         border-radius: 5px;
         background-color: $deep-sky-blue;
-    }
-
-    .body {
-        background-color: $anti-flash-white;
     }
 
     .body--submit-button {
