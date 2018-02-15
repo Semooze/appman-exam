@@ -6,7 +6,8 @@
     "scripts": {
         "client": "webpack-dev-server --hot --inline --config ./config/webpack.config.dev.js",
         "server": "node server/index.js",
-        "test": "jest --watch"
+        "test": "jest --watch",
+        "start": "webpack-dev-server --open --config .\\config\\webpack.config.dev.js"
     },
     "dependencies": {
         "body-parser": "1.17.2",
