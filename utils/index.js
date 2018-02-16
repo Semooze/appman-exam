@@ -57,5 +57,24 @@ exports.removeStudentScoreBySubject = (store, { name, subject }) => {
  * @params {Object} store
  */
 exports.transformData = store => {
-    // code here
+    let newStore = {};
+    store.forEach((item) => {
+        let obj = {};
+        item.students.forEach((student) => {
+            obj[student.name] = {
+                name: student.name
+            };
+            obj[student.name][item.subject] = student.score;
+        });
+
+        for(let name in obj) {
+            if (newStore[name]) {
+                _.assign(newStore[name], obj[name]);
+            } else {
+                newStore[name] = _.assign(obj[name]);
+            }
+        }
+    });
+
+    return _.values(newStore);
 };
